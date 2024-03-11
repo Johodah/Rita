@@ -28,12 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            picture_box = new PictureBox();
+            btn_clear = new Button();
+            btn_undo = new Button();
+            btn_savefile = new Button();
+            btn_draw_circle = new Button();
+            btn_draw_rectangle = new Button();
+            btn_draw_triangle = new Button();
+            ((System.ComponentModel.ISupportInitialize)picture_box).BeginInit();
+            SuspendLayout();
+            // 
+            // picture_box
+            // 
+            picture_box.BackColor = SystemColors.ControlLightLight;
+            picture_box.Location = new Point(0, 0);
+            picture_box.Name = "picture_box";
+            picture_box.Size = new Size(1010, 375);
+            picture_box.TabIndex = 0;
+            picture_box.TabStop = false;
+            // 
+            // btn_clear
+            // 
+            btn_clear.Location = new Point(887, 404);
+            btn_clear.Name = "btn_clear";
+            btn_clear.Size = new Size(94, 29);
+            btn_clear.TabIndex = 1;
+            btn_clear.Text = "Clear";
+            btn_clear.UseVisualStyleBackColor = true;
+            btn_clear.Click += btn_clear_Click;
+            // 
+            // btn_undo
+            // 
+            btn_undo.Location = new Point(887, 466);
+            btn_undo.Name = "btn_undo";
+            btn_undo.Size = new Size(94, 29);
+            btn_undo.TabIndex = 2;
+            btn_undo.Text = "Undo";
+            btn_undo.UseVisualStyleBackColor = true;
+            btn_undo.Click += btn_undo_Click;
+            // 
+            // btn_savefile
+            // 
+            btn_savefile.Location = new Point(756, 404);
+            btn_savefile.Name = "btn_savefile";
+            btn_savefile.Size = new Size(94, 29);
+            btn_savefile.TabIndex = 3;
+            btn_savefile.Text = "Save file";
+            btn_savefile.UseVisualStyleBackColor = true;
+            btn_savefile.Click += btn_savefile_Click;
+            // 
+            // btn_draw_circle
+            // 
+            btn_draw_circle.Location = new Point(12, 404);
+            btn_draw_circle.Name = "btn_draw_circle";
+            btn_draw_circle.Size = new Size(94, 29);
+            btn_draw_circle.TabIndex = 4;
+            btn_draw_circle.Text = "Circle";
+            btn_draw_circle.UseVisualStyleBackColor = true;
+            btn_draw_circle.Click += btn_draw_circle_Click;
+            // 
+            // btn_draw_rectangle
+            // 
+            btn_draw_rectangle.Location = new Point(139, 404);
+            btn_draw_rectangle.Name = "btn_draw_rectangle";
+            btn_draw_rectangle.Size = new Size(94, 29);
+            btn_draw_rectangle.TabIndex = 5;
+            btn_draw_rectangle.Text = "Rectangle";
+            btn_draw_rectangle.UseVisualStyleBackColor = true;
+            btn_draw_rectangle.Click += btn_draw_rectangle_Click;
+            // 
+            // btn_draw_triangle
+            // 
+            btn_draw_triangle.Location = new Point(12, 466);
+            btn_draw_triangle.Name = "btn_draw_triangle";
+            btn_draw_triangle.Size = new Size(94, 29);
+            btn_draw_triangle.TabIndex = 6;
+            btn_draw_triangle.Text = "Triangle";
+            btn_draw_triangle.UseVisualStyleBackColor = true;
+            btn_draw_triangle.Click += btn_draw_triangle_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(1010, 518);
+            Controls.Add(btn_draw_triangle);
+            Controls.Add(btn_draw_rectangle);
+            Controls.Add(btn_draw_circle);
+            Controls.Add(btn_savefile);
+            Controls.Add(btn_undo);
+            Controls.Add(btn_clear);
+            Controls.Add(picture_box);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)picture_box).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox picture_box;
+        private Button btn_clear;
+        private Button btn_undo;
+        private Button btn_savefile;
+        private Button btn_draw_circle;
+        private Button btn_draw_rectangle;
+        private Button btn_draw_triangle;
     }
 }
