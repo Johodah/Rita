@@ -22,7 +22,7 @@ namespace Rita
         {
             var pen = new Pen(Colour);
 
-            g.DrawEllipse(pen, Center.X - Radius, Center.Y - Radius, Diameter, Diameter);
+           // g.DrawEllipse(p
         }
 
     }

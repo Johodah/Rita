@@ -46,6 +46,7 @@
             picture_box.Size = new Size(1010, 375);
             picture_box.TabIndex = 0;
             picture_box.TabStop = false;
+            picture_box.Click += picture_box_Click;
             picture_box.Paint += picture_box_Paint;
             // 
             // btn_clear
