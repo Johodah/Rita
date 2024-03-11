@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Rita
 {
-    internal class Rectangle : Shape
+    public class Rectangle : Shape
     {
+        public Rectangle()
+        {
+            TypeID = "rectangle";
+        }
+
+        public int Length { get; set; }
+        public int Height { get; set; }
+
     }
 }

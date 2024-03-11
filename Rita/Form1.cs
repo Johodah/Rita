@@ -9,7 +9,7 @@ namespace Rita
 
         private void btn_draw_circle_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void btn_draw_rectangle_Click(object sender, EventArgs e)

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Rita
 {
-    internal class Triangle : Shape
+    public class Triangle : Shape
     {
+        public Triangle() 
+        {
+            TypeID = "triangle";
+        }
+
     }
 }
