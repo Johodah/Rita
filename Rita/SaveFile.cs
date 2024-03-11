@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rita
 {
-    public abstract class Shape
+    internal class SaveFile
     {
-        public string TypeID { get; protected set; }
-
-        public abstract void Draw(Graphics g);
     }
 }
