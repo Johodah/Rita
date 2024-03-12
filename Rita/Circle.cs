@@ -16,20 +16,21 @@ namespace Rita
         }
 
 
-
-        public int Radius { get; set; }
+        private int radius {  get; set; }
+        public int Radius  {
+            
+            get { return radius; }
+            set 
+            {
+                if (value >= 0)
+                    radius = value;
+                else
+                    throw new ArgumentException("Radius must be positive number");
+            } 
+        }
         public Color Colour { get; set; }
         public Point Center { get; set; }
 
-        [JsonIgnore]
-
-        public int Diameter
-        {
-            get
-            {
-                return Radius * 2;
-            }
-        }
         [JsonIgnore]
         public double Circumference
         {
@@ -50,9 +51,10 @@ namespace Rita
 
         public override void Draw(Graphics g)
         {
-            var pen = new Pen(Colour);
-
-            g.DrawEllipse(pen, Center.X - Radius, Center.Y - Radius, Diameter, Diameter);
+            using (var pen = new Pen(Colour))
+            {
+                g.DrawEllipse(pen, Center.X - Radius, Center.Y - Radius, Radius * 2, Radius * 2);
+            } 
         }
 
     }
