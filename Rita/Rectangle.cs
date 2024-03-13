@@ -12,37 +12,22 @@ namespace Rita
     {
         public Rectangle()
         {
-            TypeID = "rectangle";
+            Type = ShapeType.Rectangle;
         }
 
         public int Length { get; set; }
         public int Height { get; set; }
 
-        public Color Colour { get; set; }
-        public Point Center { get; set; }
-
-        [JsonIgnore]
-        public double Circumference 
-        { 
-            get
-            {
-               return Height + Length;
-            }
-        }
-        [JsonIgnore]
-        public double Area
-        {
-            get
-            {
-                return Height * Length;
-            }
-        }
-
-
+        
         public override void Draw(Graphics g)
         {
-            var pen = new Pen(Colour);
+            using (var brush = new SolidBrush(Colour))
+            {
+                g.FillRectangle(brush, Position.X - (Length / 2), Position.Y - (Height / 2), Length, Height);
+            }
 
+            //Center.X - (Width / 2),
+            //Center.Y - (Height / 2),
            // g.DrawRectangle(pen, Center.X - Length, Center.Y - Height);
         }
 

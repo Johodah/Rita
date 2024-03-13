@@ -11,18 +11,20 @@ namespace Rita
     {
         public Triangle() 
         {
-            TypeID = "triangle";
+            Type = ShapeType.Triangle;
         }
 
-        public Color Colour { get; set; }
-        public Point Center { get; set; }
-
+        public Point Top {  get; set; }
+        public Point Left { get; set; }
+        public Point Right { get; set; }
 
         public override void Draw(Graphics g)
         {
-            var pen = new Pen(Colour);
-
-           // g.DrawEllipse(p
+            Point[] trianglePoints = { Top, Left, Right };
+            using (var brush = new SolidBrush(Colour))
+            {
+                g.FillPolygon(brush, trianglePoints);
+            }
         }
 
     }

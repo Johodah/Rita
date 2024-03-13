@@ -35,6 +35,9 @@
             btn_draw_circle = new Button();
             btn_draw_rectangle = new Button();
             btn_draw_triangle = new Button();
+            btn_colors = new ComboBox();
+            saveFileDialog1 = new SaveFileDialog();
+            btn_load = new Button();
             ((System.ComponentModel.ISupportInitialize)picture_box).BeginInit();
             SuspendLayout();
             // 
@@ -46,8 +49,8 @@
             picture_box.Size = new Size(1010, 375);
             picture_box.TabIndex = 0;
             picture_box.TabStop = false;
-            picture_box.Click += picture_box_Click;
             picture_box.Paint += picture_box_Paint;
+            picture_box.MouseClick += picture_box_MouseDown;
             // 
             // btn_clear
             // 
@@ -109,12 +112,38 @@
             btn_draw_triangle.UseVisualStyleBackColor = true;
             btn_draw_triangle.Click += btn_draw_triangle_Click;
             // 
+            // btn_colors
+            // 
+            btn_colors.FormattingEnabled = true;
+            btn_colors.Items.AddRange(new object[] { "Green", "Blue", "Red", "Orange", "Purple", "Yellow", "Pink", "Cyan" });
+            btn_colors.Location = new Point(382, 405);
+            btn_colors.Name = "btn_colors";
+            btn_colors.Size = new Size(151, 28);
+            btn_colors.TabIndex = 7;
+            btn_colors.SelectedIndexChanged += btn_colors_SelectedIndexChanged;
+            // 
+            // saveFileDialog1
+            // 
+            saveFileDialog1.Filter = "Shape YrkeshogskolaN|.syn|Alla filer|*.*";
+            // 
+            // btn_load
+            // 
+            btn_load.Location = new Point(756, 466);
+            btn_load.Name = "btn_load";
+            btn_load.Size = new Size(94, 29);
+            btn_load.TabIndex = 8;
+            btn_load.Text = "Load";
+            btn_load.UseVisualStyleBackColor = true;
+            btn_load.Click += btn_load_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(1010, 518);
+            Controls.Add(btn_load);
+            Controls.Add(btn_colors);
             Controls.Add(btn_draw_triangle);
             Controls.Add(btn_draw_rectangle);
             Controls.Add(btn_draw_circle);
@@ -137,5 +166,8 @@
         private Button btn_draw_circle;
         private Button btn_draw_rectangle;
         private Button btn_draw_triangle;
+        private ComboBox btn_colors;
+        private SaveFileDialog saveFileDialog1;
+        private Button btn_load;
     }
 }

@@ -8,7 +8,12 @@ namespace Rita
 {
     public abstract class Shape
     {
-        public string TypeID { get; protected set; }
+        public enum ShapeType { Circle, Triangle, Rectangle }
+        public ShapeType Type { get; set; }
+        public Point Position { get; set; }
+        public Color Colour { get; set; }
+        public int Size { get; set; }
+        //public string TypeID { get; protected set; }
 
         public abstract void Draw(Graphics g);
     }
