@@ -38,6 +38,7 @@
             btn_colors = new ComboBox();
             saveFileDialog1 = new SaveFileDialog();
             btn_load = new Button();
+            btn_saveImage = new Button();
             ((System.ComponentModel.ISupportInitialize)picture_box).BeginInit();
             SuspendLayout();
             // 
@@ -136,12 +137,23 @@
             btn_load.UseVisualStyleBackColor = true;
             btn_load.Click += btn_load_Click;
             // 
+            // btn_saveImage
+            // 
+            btn_saveImage.Location = new Point(595, 466);
+            btn_saveImage.Name = "btn_saveImage";
+            btn_saveImage.Size = new Size(94, 29);
+            btn_saveImage.TabIndex = 9;
+            btn_saveImage.Text = "Spara bild";
+            btn_saveImage.UseVisualStyleBackColor = true;
+            btn_saveImage.Click += btn_saveImage_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(1010, 518);
+            Controls.Add(btn_saveImage);
             Controls.Add(btn_load);
             Controls.Add(btn_colors);
             Controls.Add(btn_draw_triangle);
@@ -169,5 +181,6 @@
         private ComboBox btn_colors;
         private SaveFileDialog saveFileDialog1;
         private Button btn_load;
+        private Button btn_saveImage;
     }
 }

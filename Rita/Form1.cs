@@ -79,7 +79,23 @@ namespace Rita
             }
 
         }
+        private void btn_saveImage_Click(object sender, EventArgs e)
+        {
+            using (var saveImage = new SaveFileDialog())
+            {
+                saveImage.Filter = "JPEG Image| *.jpg|PNG Image|*.png";
+                if (saveImage.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap bmp = new Bitmap(picture_box.Width, picture_box.Height);
 
+                    picture_box.DrawToBitmap(bmp, picture_box.ClientRectangle);
+
+                    bmp.Save(saveImage.FileName);
+
+                }
+            }
+        }
+    
         private void btn_clear_Click(object sender, EventArgs e)
         {
 
@@ -267,5 +283,6 @@ namespace Rita
 
         }
 
+        
     }
 }
