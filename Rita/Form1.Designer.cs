@@ -79,7 +79,7 @@
             btn_savefile.Name = "btn_savefile";
             btn_savefile.Size = new Size(94, 29);
             btn_savefile.TabIndex = 3;
-            btn_savefile.Text = "Save file";
+            btn_savefile.Text = "Save as file";
             btn_savefile.UseVisualStyleBackColor = true;
             btn_savefile.Click += btn_savefile_Click;
             // 
@@ -139,11 +139,11 @@
             // 
             // btn_saveImage
             // 
-            btn_saveImage.Location = new Point(595, 466);
+            btn_saveImage.Location = new Point(571, 466);
             btn_saveImage.Name = "btn_saveImage";
-            btn_saveImage.Size = new Size(94, 29);
+            btn_saveImage.Size = new Size(118, 29);
             btn_saveImage.TabIndex = 9;
-            btn_saveImage.Text = "Spara bild";
+            btn_saveImage.Text = "Save as image";
             btn_saveImage.UseVisualStyleBackColor = true;
             btn_saveImage.Click += btn_saveImage_Click;
             // 
