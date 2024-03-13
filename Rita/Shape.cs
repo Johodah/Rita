@@ -13,7 +13,6 @@ namespace Rita
         public Point Position { get; set; }
         public Color Colour { get; set; }
         public int Size { get; set; }
-        //public string TypeID { get; protected set; }
 
         public abstract void Draw(Graphics g);
     }

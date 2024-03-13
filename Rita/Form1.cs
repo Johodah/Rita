@@ -119,37 +119,9 @@ namespace Rita
             {
                 shape.Draw(e.Graphics);
 
-                //using (var brush = new SolidBrush(shape.Colour))
-                //{
-                //    switch (shape.Type)
-                //    {
-                //        case Shape.ShapeType.Circle:
-                //            e.Graphics.FillEllipse(brush, shape.Position.X, shape.Position.Y, shape.Size, shape.Size);
-                //            break;
-                //        case Shape.ShapeType.Triangle:
-                //            Point top = new Point(shape.Position.X, shape.Position.Y - 30);
-                //            Point left = new Point(shape.Position.X - 25, shape.Position.Y + 15);
-                //            Point right = new Point(shape.Position.X + 25, shape.Position.Y + 15);
-                //            Point[] triangel = { top, left, right };
-                //            e.Graphics.FillPolygon(brush, triangel);
-                //            break;
-                //        case Shape.ShapeType.Rectangle:
-                //            e.Graphics.FillRectangle(brush, shape.Position.X, shape.Position.Y, shape.Size, shape.Size);
-                //            break;
-                //    }
-                //}
+                
             }
-            //foreach (var shape in shapes)
-
-            //{
-            //    using (var brush = new SolidBrush(shape.colour()))
-            //    {
-            //        switch (shape.TypeID)
-            //        {
-            //            case Shape.TypeID;
-            //        }
-            //    }
-            //}
+           
         }
 
         private void picture_box_MouseDown(object sender, MouseEventArgs e)
@@ -169,19 +141,6 @@ namespace Rita
 
             }
 
-
-            //    var circle = new Circle()
-            //    {
-            //        Colour = Color.Azure,
-            //        Radius = 15,
-            //        Center = mouse.Location
-            //    };
-            //    draw.Push(circle);
-            //    redo.Clear();
-
-            //    drawCircle = false;
-            //}
-
             else if (drawRectangle)
             {
 
@@ -197,18 +156,6 @@ namespace Rita
                 drawRectangle = false;
 
             }
-            //var mouse = (MouseEventArgs)e;
-            //var rectangle = new Rectangle()
-            //{
-            //    Colour = Color.OrangeRed,
-            //    Center = mouse.Location,
-            //    Height = 15,
-            //    Length = 10,
-            //};
-
-            //draw.Push(rectangle);
-            //redo.Clear();
-            //drawRectangle = false;
 
             else if (drawTriangle)
             {
@@ -230,15 +177,6 @@ namespace Rita
             }
 
             picture_box.Refresh();
-            //var mouse = (MouseEventArgs)e;
-            //var triangle = new Triangle()
-            //{
-            //    Colour = Color.PaleGreen,
-            //    Center = mouse.Location
-            //};
-            //draw.Push(triangle);
-            //redo.Clear();
-            //drawTriangle = false;
         }
 
 

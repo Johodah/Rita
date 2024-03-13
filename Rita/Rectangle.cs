@@ -25,10 +25,6 @@ namespace Rita
             {
                 g.FillRectangle(brush, Position.X - (Length / 2), Position.Y - (Height / 2), Length, Height);
             }
-
-            //Center.X - (Width / 2),
-            //Center.Y - (Height / 2),
-           // g.DrawRectangle(pen, Center.X - Length, Center.Y - Height);
         }
 
     }

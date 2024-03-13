@@ -133,7 +133,7 @@
             btn_load.Name = "btn_load";
             btn_load.Size = new Size(94, 29);
             btn_load.TabIndex = 8;
-            btn_load.Text = "Load";
+            btn_load.Text = "Load file";
             btn_load.UseVisualStyleBackColor = true;
             btn_load.Click += btn_load_Click;
             // 
