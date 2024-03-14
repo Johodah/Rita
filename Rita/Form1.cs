@@ -26,16 +26,22 @@ namespace Rita
         private void btn_draw_circle_Click(object sender, EventArgs e)
         {
             drawCircle = true;
+            drawTriangle = false;
+            drawRectangle = false;
         }
 
         private void btn_draw_rectangle_Click(object sender, EventArgs e)
         {
             drawRectangle = true;
+            drawTriangle = false;
+            drawCircle = false;
         }
 
         private void btn_draw_triangle_Click(object sender, EventArgs e)
         {
             drawTriangle = true;
+            drawCircle = false;
+            drawRectangle = false;
         }
 
         private void btn_savefile_Click(object sender, EventArgs e)
@@ -83,7 +89,7 @@ namespace Rita
         {
             using (var saveImage = new SaveFileDialog())
             {
-                saveImage.Filter = "JPEG Image| *.jpg|PNG Image|*.png";
+                saveImage.Filter = "JPEG Image|*.jpg|PNG Image|*.png";
                 if (saveImage.ShowDialog() == DialogResult.OK)
                 {
                     Bitmap bmp = new Bitmap(picture_box.Width, picture_box.Height);
@@ -118,10 +124,8 @@ namespace Rita
             foreach (var shape in drawHistory)
             {
                 shape.Draw(e.Graphics);
-
-                
-            }
-           
+  
+            }           
         }
 
         private void picture_box_MouseDown(object sender, MouseEventArgs e)
@@ -137,8 +141,7 @@ namespace Rita
                 };
 
                 drawHistory.Push(newCircle);
-                drawCircle = false;
-
+              
             }
 
             else if (drawRectangle)
@@ -153,7 +156,7 @@ namespace Rita
                     Height = 20,
                 };
                 drawHistory.Push(newRectangle);
-                drawRectangle = false;
+                //drawRectangle = false;
 
             }
 
@@ -172,7 +175,7 @@ namespace Rita
 
                 };
                 drawHistory.Push(newTriangle);
-                drawTriangle = false;
+
 
             }
 
