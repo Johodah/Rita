@@ -169,7 +169,7 @@ namespace Rita
                     Colour = SelectedColor,
                     Top = new Point(e.Location.X, e.Location.Y - 30),
                     Left = new Point(e.Location.X - 25, e.Location.Y + 15),
-                    Right = new Point(e.Location.X + 25, e.Location.Y - 15),
+                    Right = new Point(e.Location.X + 25, e.Location.Y + 15),
 
 
 
