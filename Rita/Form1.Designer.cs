@@ -119,8 +119,9 @@
             btn_colors.Items.AddRange(new object[] { "Green", "Blue", "Red", "Orange", "Purple", "Yellow", "Pink", "Cyan" });
             btn_colors.Location = new Point(382, 405);
             btn_colors.Name = "btn_colors";
-            btn_colors.Size = new Size(151, 28);
+            btn_colors.Size = new Size(142, 28);
             btn_colors.TabIndex = 7;
+            btn_colors.Text = "Available Colors";
             btn_colors.SelectedIndexChanged += btn_colors_SelectedIndexChanged;
             // 
             // saveFileDialog1
