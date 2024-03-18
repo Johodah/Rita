@@ -18,9 +18,9 @@ namespace Rita
         private bool drawRectangle = false;
         private bool drawTriangle = false;
 
-        private Stack<Shape> drawHistory = new Stack<Shape>();
+        private Stack<Shape> drawHistory = new Stack<Shape>(); //Stacken för historik
 
-        private Stack<Shape> redoHistory = new Stack<Shape>();
+        private Stack<Shape> redoHistory = new Stack<Shape>(); //stacken för att ångra "undo"
         Color SelectedColor;
 
         private void btn_draw_circle_Click(object sender, EventArgs e)
@@ -37,14 +37,14 @@ namespace Rita
             drawCircle = false;
         }
 
-        private void btn_draw_triangle_Click(object sender, EventArgs e)
+        private void btn_draw_triangle_Click(object sender, EventArgs e) //om en form blir true är de andra false = den ska ritas ut
         {
             drawTriangle = true;
             drawCircle = false;
             drawRectangle = false;
         }
 
-        private void btn_savefile_Click(object sender, EventArgs e)
+        private void btn_savefile_Click(object sender, EventArgs e) //metod för att spara txt fil
         {
             var jsonSerializerSettings = new JsonSerializerSettings()
             {
@@ -61,10 +61,10 @@ namespace Rita
             }
         }
 
-        private void btn_load_Click(object sender, EventArgs e)
+        private void btn_load_Click(object sender, EventArgs e) //metod för att hitta filen och ladda in den i programmet
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "All Files|*.*";
+            ofd.Filter = "All Files|*.*"; //Söker efter alla typer av filer istället för specifik typ
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 string jsonContent = File.ReadAllText(ofd.FileName);
@@ -85,7 +85,7 @@ namespace Rita
             }
 
         }
-        private void btn_saveImage_Click(object sender, EventArgs e)
+        private void btn_saveImage_Click(object sender, EventArgs e) //Spara ritning som bild istället för text format
         {
             using (var saveImage = new SaveFileDialog())
             {
@@ -102,14 +102,14 @@ namespace Rita
             }
         }
     
-        private void btn_clear_Click(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e) //rensa rutan
         {
 
             drawHistory.Clear();
             picture_box.Refresh();
         }
 
-        private void btn_undo_Click(object sender, EventArgs e)
+        private void btn_undo_Click(object sender, EventArgs e) //Ångra sig
         {
             if (drawHistory.Count > 0)
             {
@@ -128,7 +128,7 @@ namespace Rita
             }           
         }
 
-        private void picture_box_MouseDown(object sender, MouseEventArgs e)
+        private void picture_box_MouseDown(object sender, MouseEventArgs e) //vad som ska hända när man klickar på ritytan, "där ska formen ritas och i detta format".
         {
             if (drawCircle)
             {
@@ -150,10 +150,10 @@ namespace Rita
                 Rectangle newRectangle = new Rectangle
                 {
                     Type = Shape.ShapeType.Rectangle,
-                    Position = e.Location,
-                    Colour = SelectedColor,
-                    Length = 35,
-                    Height = 20,
+                    Position = e.Location, //e.location innebär där man klickar
+                    Colour = SelectedColor, 
+                    Length = 50,
+                    Height = 30, //val av storlek
                 };
                 drawHistory.Push(newRectangle);
             }
@@ -179,7 +179,7 @@ namespace Rita
             picture_box.Refresh();
         }
 
-        private void btn_colors_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_colors_SelectedIndexChanged(object sender, EventArgs e) //Knappen för att byta färg
         {
             switch (btn_colors.SelectedItem.ToString())
             {

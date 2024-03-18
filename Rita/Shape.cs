@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rita
 {
-    public abstract class Shape
+    public abstract class Shape //grundegenskaperna för alla typer av former sparas i Shape
     {
         public enum ShapeType { Circle, Triangle, Rectangle }
         public ShapeType Type { get; set; }

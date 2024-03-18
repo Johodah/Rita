@@ -9,14 +9,14 @@ using System.Drawing;
 
 namespace Rita
 {
-    public class Circle : Shape
+    public class Circle : Shape //subclass för Shape som skapar cirkeln
     {
         public Circle()
         {
             Type = ShapeType.Circle;
         }
 
-        public int Radius {  get; set; }
+        public int Radius {  get; set; } //storleken baseras på radius av cirkel
    
 
         public override void Draw(Graphics g)

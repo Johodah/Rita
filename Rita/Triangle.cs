@@ -16,7 +16,7 @@ namespace Rita
 
         public Point Top {  get; set; }
         public Point Left { get; set; }
-        public Point Right { get; set; }
+        public Point Right { get; set; } //enklaste sättet att rita triangel med punkter som man sedan anger en längd på i form1.cs
 
         public override void Draw(Graphics g)
         {

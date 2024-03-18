@@ -15,7 +15,7 @@ namespace Rita
             Type = ShapeType.Rectangle;
         }
 
-        public int Length { get; set; }
+        public int Length { get; set; } //Använder bara bredden och höjden för att räkna ut rektangel, storlek anges i Form1.cs
         public int Height { get; set; }
 
         
@@ -23,7 +23,7 @@ namespace Rita
         {
             using (var brush = new SolidBrush(Colour))
             {
-                g.FillRectangle(brush, Position.X - (Length / 2), Position.Y - (Height / 2), Length, Height);
+                g.FillRectangle(brush, Position.X - (Length / 2), Position.Y - (Height / 2), Length, Height); //uträkning för formen
             }
         }
 
