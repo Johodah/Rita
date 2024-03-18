@@ -156,8 +156,6 @@ namespace Rita
                     Height = 20,
                 };
                 drawHistory.Push(newRectangle);
-                //drawRectangle = false;
-
             }
 
             else if (drawTriangle)
@@ -176,14 +174,10 @@ namespace Rita
                 };
                 drawHistory.Push(newTriangle);
 
-
             }
 
             picture_box.Refresh();
         }
-
-
-
 
         private void btn_colors_SelectedIndexChanged(object sender, EventArgs e)
         {
